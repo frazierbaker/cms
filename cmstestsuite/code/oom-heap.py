@@ -1,4 +1,5 @@
 import sys
+# -*- coding: utf-8 -*-
 
 big = [0] * (128 * 1024 * 1024)
 big[10000] = int(sys.stdin.readline().strip())

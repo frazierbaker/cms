@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 #
 # cms documentation build configuration file, created by
 # sphinx-quickstart on Tue Jan  1 11:59:01 2013.

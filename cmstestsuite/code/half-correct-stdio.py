@@ -1,4 +1,5 @@
 import sys
+# -*- coding: utf-8 -*-
 
 n = int(sys.stdin.readline().strip())
 if n % 2 == 0:

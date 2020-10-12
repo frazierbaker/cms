@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 # Programming contest management system
 # Copyright © 2014 Artem Iglikov <artem.iglikov@gmail.com>

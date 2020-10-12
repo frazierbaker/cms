@@ -1,4 +1,5 @@
 import sys
+# -*- coding: utf-8 -*-
 
 while True:
     n = sys.stdin.readline().strip()
