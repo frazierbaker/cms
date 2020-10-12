@@ -366,9 +366,6 @@ class TestFileCacherDB(TestFileCacherBase, DatabaseMixin, unittest.TestCase):
         file_cacher = FileCacher()
         self._setUp(file_cacher)
 
-    def tearDown(self):
-        shutil.rmtree(self.cache_base_path, ignore_errors=True)
-
 
 class TestFileCacherFS(TestFileCacherBase, unittest.TestCase):
     """Tests for the FileCacher service with a filesystem backend."""
@@ -379,7 +376,6 @@ class TestFileCacherFS(TestFileCacherBase, unittest.TestCase):
         self._setUp(file_cacher)
 
     def tearDown(self):
-        shutil.rmtree(self.cache_base_path, ignore_errors=True)
         shutil.rmtree("fs-storage", ignore_errors=True)
 
 

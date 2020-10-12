@@ -30,7 +30,6 @@ import gevent
 from gevent.event import Event
 
 from cms.io import PriorityQueue, Service, rpc_method
-from cmscommon.datetime import monotonic_time
 
 
 logger = logging.getLogger(__name__)
@@ -308,7 +307,7 @@ class TriggeredService(Service):
 
         """
         while True:
-            self._sweeper_start = monotonic_time()
+            self._sweeper_start = time.monotonic()
             self._sweeper_event.clear()
 
             try:
@@ -319,7 +318,7 @@ class TriggeredService(Service):
 
             self._sweeper_event.wait(max(self._sweeper_start +
                                          self._sweeper_timeout -
-                                         monotonic_time(), 0))
+                                         time.monotonic(), 0))
 
     def _sweep(self):
         """Check for missed operations."""
